@@ -3,7 +3,7 @@ import { View, StyleSheet,FlatList,TouchableOpacity,Text} from 'react-native';
 // import {menuData,menuDetailedData} from '../global/Data'
 import MenuCard from './../components/MenuCard';
 import FoodDetail from './FoodDetailScreen';
-import { AppContext } from '../contexts/context';
+import { AppContext } from '../contexts/ContextProvider';
 // import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 export default class Route1 extends Component { 
@@ -22,6 +22,7 @@ export default class Route1 extends Component {
   
     makeRemoteRequest = () => {
       const url = `https://api.airtable.com/v0/appptq4MNSW4L0JHc/Ofertas?api_key=keyONPXkBC1IlgUIG`;
+    
       this.setState();
   
       fetch(url)

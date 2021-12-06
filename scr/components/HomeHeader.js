@@ -1,9 +1,10 @@
 import React from 'react'
 
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {Icon, withBadge} from 'react-native-elements'
 import {colors,parameters} from '../global/styles'
 import DrawerNavigator from '../navigation/DrawerNavigator';
+import '../../assets/Logo escrito.png'
 
 export default function HomeHeader({navigation}){
 
@@ -11,32 +12,25 @@ export default function HomeHeader({navigation}){
 
     return(
     <View style ={styles.header}>
+        <View style = {{flex:1, flexDirection:'row'}}>
+            <View style={{alignItems: 'flex-start', justifyContent:'center'}}>
+                <Icon 
+                    type = "material-community"
+                    name = "menu"
+                    color = {colors.cardbackground}
+                    size = {32}
+                    onPress={() => {navigation.toggleDrawer()}}
+                />
+            </View>
 
-        <View style ={{alignItems:"center",justifyContent:'center', marginLeft:15}}>
-            <Icon 
-                type = "material-community"
-                name = "menu"
-                color = {colors.cardbackground}
-                size = {32}
-                onPress={() => {navigation.toggleDrawer()}}
-
-            />
+            <View style={{alignItems: 'center', justifyContent:'center', flex:5}}>
+                <Image 
+                    style={styles.image} 
+                    source={require('../../assets/Logo escrito.png')}
+                    accessibilityLabel='logo do app'
+                />
+            </View>
         </View>
-
-        <View style ={{alignItems:"center", justifyContent:"center"}}>
-            <Text style ={{color:colors.cardbackground, fontSize:25,fontWeight:'bold'}}>XpressFood</Text>
-        </View>
-
-        {/* <View style ={{alignItems:"center", justifyContent:"center", marginRight:15}}>
-            <BadgeIcon 
-                type ="material-community"
-                name ="cart"
-                size = {35}
-                color ={colors.cardbackground}
-            />
-        </View> */}
-
-
     </View>
     )
 }
@@ -44,9 +38,12 @@ export default function HomeHeader({navigation}){
 const styles = StyleSheet.create({
 
     header:{
-        flexDirection:'row',
-        backgroundColor:colors.buttons,
-        height:parameters.headerHeight,
-        justifyContent:'space-between'
+        backgroundColor:'#B5EBFA',
+        height:50,
+    },
+    image:{
+        width:100,
+        height:40,
+        resizeMode:'contain',
     }
 })

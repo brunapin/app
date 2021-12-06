@@ -6,7 +6,7 @@ import StepperInput from '../components/StepperInput'
 import { SwipeListView } from 'react-native-swipe-list-view'
 import { colors } from '../global/styles'
 import {Icon} from 'react-native-elements'
-import { AppContext } from '../contexts/context'
+import { AppContext } from '../contexts/ContextProvider'
 import FoodDetail from './FoodDetailScreen'
 import axios from 'axios'
 

@@ -1,12 +1,7 @@
 import React from 'react'
-
 import {View, Text, StyleSheet,StatusBar} from 'react-native'
-// import  {SignInContextProvider}  from './src/contexts/authContext'
 import {colors} from './scr/global/styles'
-import RootNavigator from './scr/navigation/RootNavigator'
-// import Route1 from './scr/screens/MenuTabs'
-
-import MyOrdersScreen from './scr/screens/MyOrdersScreen'
+import Providers from './scr/navigation/Providers'
 
 export default function App(){
   return(
@@ -16,10 +11,8 @@ export default function App(){
         barStyle = "light-content"
         backgroundColor = {colors.statusbar}
       />  
-        <RootNavigator />   
-        {/* <FoodDetail/> */}
+        <Providers />   
     </View>
-    // </SignInContextProvider> 
   
   )
 }
@@ -28,3 +21,28 @@ const styles = StyleSheet.create({
   container: {flex:1}
 })
 
+// import Video from 'react-native-video';
+// import React from 'react';
+
+// // Within your render function, assuming you have a file called
+// // "background.mp4" in your project. You can include multiple videos
+// // on a single screen if you like.
+
+// <Video source={{uri: "https://www.youtube.com/watch?v=maWvFO6qM5A"}}   // Can be a URL or a local file.
+//        ref={(ref) => {
+//          this.player = ref
+//        }}                                      // Store reference
+//        onBuffer={this.onBuffer}                // Callback when remote video is buffering
+//        onError={this.videoError}               // Callback when video cannot be loaded
+//        style={styles.backgroundVideo} />
+
+// // Later on in your styles..
+// var styles = StyleSheet.create({
+//   backgroundVideo: {
+//     position: 'absolute',
+//     top: 0,
+//     left: 0,
+//     bottom: 0,
+//     right: 0,
+//   },
+// });

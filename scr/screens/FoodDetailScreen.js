@@ -4,7 +4,7 @@ import Header from './../components/Header'
 import { colors, parameters } from '../global/styles';
 import StepperInput from '../components/StepperInput';
 import TextButton from '../components/TextButton';
-import { AppContext } from '../contexts/context';
+import { AppContext } from '../contexts/ContextProvider';
 import 'react-native-gesture-handler';
 import {Icon} from 'react-native-elements'
 

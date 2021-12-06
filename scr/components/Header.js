@@ -15,7 +15,7 @@ export default function Header({title,type,navigation}){
                     onPress ={()=>{navigation.goBack()}}
                 />              
             </View>
-            <View style ={{flex: 1, alignItems:'center', alignSelf:'center'}}>
+            <View style ={{flex: 1, alignItems:'flex-start', marginLeft:'2%', alignSelf:'center'}}>
                     <Text style ={styles.headerText}>{title}</Text>
             </View>
         </View>
@@ -25,12 +25,11 @@ export default function Header({title,type,navigation}){
 const styles = StyleSheet.create({
     header:{
         flexDirection:"row",
-        backgroundColor:colors.buttons,
+        backgroundColor:'#FE9293',
         height:parameters.headerHeight
     },
     headerText:{
         color:colors.headerText,
-        fontSize:22,
-        fontWeight:"bold",
+        fontSize:20,
     },
 })
